@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>cPlayer Demo</title>
+		<style>
+		  * {
+		    margin: 0;
+		    padding: 0;
+		  }
+		  html, body {
+		    font-family: "微软雅黑", "microsoft yahei", arial, serif;
+		  }
+		  .fltL {
+		    float: left;
+		  }
+		  .fltR {
+		    float: right;
+		  }
+		  .wrap {
+		    width: 1100px;
+		    margin: 0 auto;
+		    padding: 30px 0;
+		  }
+		  .wrap .proj-title {
+		    color: #333;
+		    font-size: 30px;
+		  }
+		  .wrap .proj-title span {
+		    margin: 0 0 0 20px;
+		    color: #3c3c3c;
+		    font-size: 22px;
+		  }
+		  .cmplayer-container {
+		    margin: 50px 0;
+		  }
+		  .wrap section h1 {
+		    margin: 0 0 10px 0;
+		    color: #333;
+		    font-size: 22px;
+		  }
+		  .wrap section h2 {
+		    margin: 0 0 5px 0;
+		    color: #333;
+		    font-size: 16px;
+		  }
+		  .wrap section code {
+		    width: 620px;
+		    margin: 20px 0;
+		    padding: 15px 20px;
+		    background: #535353;
+		    color: #fff;
+		    display: block;
+		    overflow: auto;
+		  }
+		  .wrap section code p {
+		    margin: 5px 0;
+		  }
+		  .wrap section .s {
+		    margin: 20px 0;
+		  }
+		  .wrap section .s button {
+		    width: 160px;
+		    padding: 5px 0;
+		    border: 1px solid #d4d4d4;
+		    background: #efefef;
+		    cursor: pointer;
+		    outline: none;
+		  }
+		  .wrap section .s span {
+		    margin: 0 0 0 15px;
+		    color: #3c3c3c;
+		  }
+		</style>
+	</head>
+	<body>
+	  <div class="wrap">
+      <h1 class="proj-title">cPlayer<span>一个支持自定义皮肤的 HTML5 音乐播放器</span></h1>
+      <!-- 播放器 -->
+      <div class="cmusic fltL" id="cm1"></div>
+      <section class="fltR" style="width: 360px;">
+        <h1># API</h1>
+        <div class="s"><button onclick="cm1.play()">cm1.play()</button><span>// 播放</span></div>
+        <div class="s"><button onclick="cm1.toggle()">cm1.toggle()</button><span>// 播放状态切换</span></div>
+        <div class="s"><button onclick="cm1.stop()">cm1.stop()</button><span>// 停止</span></div>
+        <div class="s"><button onclick="cm1.prev()">cm1.prev()</button><span>// 上一首</span></div>
+        <div class="s"><button onclick="cm1.next()">cm1.next()</button><span>// 下一首</span></div>
+        <div class="s"><button onclick="cm1.push(playlist2)">cm1.push()</button><span>// 插入播放列表</span></div>
+        <div class="s"><button onclick="cm1.modeToggle()">cm1.modeToggle()</button><span>// 播放模式切换</span></div>
+        <div class="s"><button onclick="cm1.seek(50)">cm1.seek()</button><span>// 跳到指定时间 (百分比)</span></div>
+        <div class="s"><button onclick="cm1.volume(100)">cm1.volume()</button><span>// 设置音量 (百分比)</span></div>
+        <div class="s"><button onclick="cm1.mute()">cm1.mute()</button><span>// 静音</span></div>
+        <div class="s"><button onclick="alert(cm1.currTrack)">cm1.currTrack</button><span>// 当前轨道</span></div>
+        <div class="s"><button onclick="cm1.destroy()">cm1.destroy()</button><span>// 销毁</span></div>
+      </section>
+      <section style="clear: left;">
+        <h1># 调用</h1>
+        <h2>HTML</h2>
+        <code>
+          <p>&lt;div id="cm1"&gt;&lt;/div&gt;</p>
+          <p>&lt;!-- ... --&gt;</p>
+          <p>&lt;script type="text/javascript" src="cmusic.min.js" id="cmScript"&gt;&lt;/script&gt;</p>
+        </code>
+        <h2>JS</h2>
+        <code>
+          <p>var cm1 = new cMusic({</p>
+          <p>&nbsp;&nbsp;'element': document.getElementById('cm1'),</p>
+          <p>&nbsp;&nbsp;'autoplay': false,</p>
+          <p>&nbsp;&nbsp;'mode': 'default',</p>
+          <p>&nbsp;&nbsp;'playlist': [</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'title': '人生讃歌',</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'artist': '茶色坚果巧克力',</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cover': 'http://p3.music.126.net/CRO_peQ7AN1e811BoKrQCw==/2327666116025235.jpg?param=500y500',</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'file': 'https://m1.jixun.moe/26082159/192000/4975020ff8fcb2ecb26233cecdd80e9cb46bfb4655d3f8b4ca14e8894b4c13ac'</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+          <p>&nbsp;&nbsp;]</p>
+          <p>})</p>
+        </code>
+        <h2>启动参数</h2>
+        <code>
+          <p>element: document.getElementById('cm1') //播放器容器</p>
+          <p>autoplay: false //是否自动播放</p>
+          <p>skin: 'default' //调用皮肤 (自带 default、vertical 两套皮肤)</p>
+          <p>mode: 'default' //播放模式</p>
+          <p>volume: 50 //初始音量</p>
+          <p>playlist: [] //播放列表</p>
+        </code>
+      </section>
+	  </div>
+    <script type="text/javascript" src="../dist/cPlayer.min.js" id="cmScript"></script>
+    <script type="text/javascript" src="demo.js"></script>
+	</body>
+</html>

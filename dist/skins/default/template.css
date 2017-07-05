@@ -1,0 +1,190 @@
+.cmplayer-default-skin * {
+  font-family: "microsoft yahei", "微软雅黑", arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.cmplayer-default-skin {
+  width: 385px;
+  height: 128px;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, .2);
+}
+.cmplayer-default-skin .cm-cover {
+  width: 128px;
+  height: 128px;
+  background: url('images/default_cover.jpg') no-repeat 100% #000;
+  background-size: cover;
+  display: block;
+  float: left;
+}
+.cmplayer-default-skin .cm-control {
+  width: 227px;
+  padding: 0 15px;
+  float: left;
+}
+.cmplayer-default-skin .cm-control .cm-title {
+  margin: 15px 0 0 0;
+  line-height: 1em;
+  color: #777;
+  font-size: 16px;
+}.cmplayer-default-skin .cm-control .cm-title,
+.cmplayer-default-skin .cm-control .cm-artist {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cmplayer-default-skin .cm-control .cm-artist {
+  margin: 8px 0 0 0;
+  line-height: 1em;
+  color: #b5b5b5;
+  font-size: 14px;
+  font-weight: normal;
+}
+.cmplayer-default-skin .cm-control .cm-seek-bar {
+  width: 100%;
+  height: 3px;
+  margin: 15px 0 0 0;
+  background: #f4f4f4;
+  position: relative;
+  cursor: pointer;
+}
+.cmplayer-default-skin .cm-control .cm-seek-bar .cm-seek-played {
+  width: 0px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #0078d7;
+  position: absolute;
+  z-index: 9;
+}
+.cmplayer-default-skin .cm-control .cm-seek-bar .cm-seek-played .cm-seek-pp {
+  width: 5px;
+  height: 5px;
+  top: 50%;
+  right: 0;
+  margin: -7px -7px 0 0;
+  background: #0078d7;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, .5);
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9;
+}
+.cmplayer-default-skin .cm-control .cm-seek-bar .cm-seek-loaded {
+  width: 0px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ebebeb;
+  position: absolute;
+  z-index: 8;
+}
+.cmplayer-default-skin .cm-control .cm-btn {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+}
+.cmplayer-default-skin .cm-control .cm-btn svg {
+  fill: #bbb;
+  display: block;
+}
+.cmplayer-default-skin .cm-control .cm-btn.large svg,
+.cmplayer-default-skin .cm-control .cm-btn:hover svg {
+  fill: #0078d7;
+}
+.cmplayer-default-skin .cm-control .cm-btn.large {
+  width: 25px;
+  height: 25px;
+}
+.cmplayer-default-skin .cm-control .cm-btn svg {
+  width: 100%;
+  height: 100%;
+}
+.cmplayer-default-skin .cm-toolbar {
+  margin: 18px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.cmplayer-default-skin .cm-toolbar .cm-btn {
+  margin: 8px 8px 0 8px;
+  float: left;
+}
+.cmplayer-default-skin .cm-toolbar .cm-toggle-btn {
+  margin: 0 5px 0 0;
+}
+.cmplayer-default-skin .cm-toolbar .cm-toggle-btn.playing .svg-playing,
+.cmplayer-default-skin .cm-toolbar .cm-toggle-btn .svg-pause {
+  display: none;
+}
+.cmplayer-default-skin .cm-toolbar .cm-toggle-btn.pause .svg-playing,
+.cmplayer-default-skin .cm-toolbar .cm-toggle-btn .svg-pause {
+  display: block;
+}
+.cmplayer-default-skin .cm-toolbar .cm-mode-btn svg {
+  display: none;
+}
+.cmplayer-default-skin .cm-toolbar .cm-mode-btn.default .svg-default,
+.cmplayer-default-skin .cm-toolbar .cm-mode-btn.loop .svg-loop,
+.cmplayer-default-skin .cm-toolbar .cm-mode-btn.random .svg-random {
+  display: block;
+}
+.cmplayer-default-skin .cm-toolbar .cm-track-time {
+  bottom: 0;
+  right: 0;
+  line-height: 1em;
+  color: #bbb;
+  font-size: 12px;
+  overflow: hidden;
+  float: right;
+  position: absolute;
+}
+.cmplayer-default-skin .cm-toolbar .cm-track-time span {
+  float: left;
+  display: block;
+}
+.cmplayer-default-skin .cm-toolbar .cm-track-time .cm-seek-pt:after {
+  margin: 0 2px;
+  content: '/';
+}
+.cmplayer-default-skin .cm-toolbar .cm-volume {
+  top: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.cmplayer-default-skin .cm-toolbar .cm-volume .cm-mute-btn {
+  margin: 0;
+}
+.cmplayer-default-skin .cm-toolbar .cm-volume .cm-mute-btn .svg-mute,
+.cmplayer-default-skin .cm-toolbar .cm-volume .cm-mute-btn.muted .svg-volume {
+  display: none;
+}
+.cmplayer-default-skin .cm-toolbar .cm-volume .cm-mute-btn.muted .svg-mute {
+  display: block;
+}
+.cmplayer-default-skin .cm-toolbar .cm-volume .cm-volume-bar {
+  width: 55px;
+  height: 3px;
+  margin: 3px 0 0 5px;
+  background: #ebebeb;
+  float: left;
+  cursor: pointer;
+}
+.cmplayer-default-skin .cm-toolbar .cm-volume .cm-volume-bar i {
+  width: 0px;
+  height: 100%;
+  background: #d1d1d1;
+  display: block;
+  position: relative;
+}
+.cmplayer-default-skin .cm-toolbar .cm-volume .cm-volume-bar:hover i {
+  background: #0078d7;
+}

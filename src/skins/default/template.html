@@ -1,0 +1,68 @@
+<div class="cmplayer-container cmplayer-default-skin">
+  <img class="cm-cover" id="{{ TrackCover }}"></img>
+  <div class="cm-control">
+    <h2 class="cm-title" id="{{ TrackTitle }}"></h2>
+    <h3 class="cm-artist" id="{{ TrackArtist }}"></h3>
+    <div class="cm-seek-bar" id="{{ Seek }}">
+      <div class="cm-seek-played" id="{{ SeekPlayed }}">
+        <i class="cm-seek-pp" id="{{ SeekPlayedPoint }}"></i>
+      </div>
+      <div class="cm-seek-loaded" id="{{ SeekLoaded }}"></div>
+    </div>
+    <div class="cm-toolbar">
+      <button class="cm-toggle-btn cm-btn large" id="{{ ToggleBtn }}" value="">
+        <svg class="svg-playing" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 357 357">
+          <polygon points="38.25,0 38.25,357 318.75,178.5"/>
+        </svg>
+        <svg class="svg-pause" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 357 357">
+          <path d="M25.5,357h102V0h-102V357z M229.5,0v357h102V0H229.5z"/>
+        </svg>
+      </button>
+      <button class="cm-stop-btn cm-btn" id="{{ StopBtn }}" value="">
+        <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 306 306">
+          <rect width="306" height="306"/>
+        </svg>
+      </button>
+      <button class="cm-prev-btn cm-btn" id="{{ PrevBtn }}" value="">
+        <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 306 306">
+          <rect width="51" height="306"/>
+          <polygon points="89.25,153 306,306 306,0"/>
+        </svg>
+      </button>
+      <button class="cm-next-btn cm-btn" id="{{ NextBtn }}" value="">
+        <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 306 306">
+          <path d="M0,306l216.75-153L0,0V306z M255,0v306h51V0H255z"/>
+        </svg>
+      </button>
+      <button class="cm-mode-btn cm-btn" id="{{ ModeBtn }}" value="">
+        <svg class="svg-default" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 344.339 344.339">
+          <rect y="46.06" width="344.339" height="29.52"/>
+          <rect y="156.506" width="344.339" height="29.52"/>
+          <rect y="268.748" width="344.339" height="29.531"/>
+        </svg>
+        <svg class="svg-loop" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 489.688 489.688">
+          <path d="M485.65,84.294l-111.9-75.3c-6.1-4.1-14.3,0.3-14.3,7.6v40.7H40.65c-19.1,0-34.6,15.5-34.6,34.6v183.9h69.2v-149.2h284.1v40.8c0,7.4,8.2,11.7,14.3,7.6l111.9-75.4C491.05,95.994,491.05,87.994,485.65,84.294z"/>
+          <path d="M414.45,362.994h-284.1v-40.7c0-7.4-8.2-11.7-14.3-7.6l-112,75.3c-5.4,3.6-5.4,11.6,0,15.3l111.9,75.4c6.1,4.1,14.3-0.3,14.3-7.6v-40.8h318.7c19.1,0,34.6-15.5,34.6-34.6v-183.9h-69.2v149.2H414.45z"/>
+        </svg>
+        <svg class="svg-random" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 408 408">
+          <path d="M168.3,132.6L35.7,0L0,35.7l132.6,132.6L168.3,132.6z M267.75,0l51,51L0,372.3L35.7,408L357,89.25l51,51V0H267.75zM275.4,239.7l-35.7,35.7l79.05,79.05l-51,51H408V265.2l-51,51L275.4,239.7z"/>
+        </svg>
+      </button>
+      <div class="cm-volume">
+        <button class="cm-mute-btn cm-btn" id="{{ MuteBtn }}">
+          <svg class="svg-volume" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 459 459">
+            <path d="M0,153v153h102l127.5,127.5v-408L102,153H0z M344.25,229.5c0-45.9-25.5-84.15-63.75-102v204C318.75,313.65,344.25,275.4,344.25,229.5z M280.5,5.1v53.55C354.45,81.6,408,147.899,408,229.5S354.45,377.4,280.5,400.35V453.9C382.5,430.949,459,339.15,459,229.5C459,119.85,382.5,28.049,280.5,5.1z"/>
+          </svg>
+          <svg class="svg-mute" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.55 461.55">
+            <path d="M345.525,229.5c0-45.9-25.5-84.15-63.75-102v56.1l63.75,63.75C345.525,239.7,345.525,234.6,345.525,229.5z M409.275,229.5c0,22.95-5.1,45.9-12.75,66.3l38.25,38.25c17.85-30.6,25.5-68.85,25.5-107.1c0-109.65-76.5-201.45-178.5-224.4V56.1C355.725,81.6,409.275,147.9,409.275,229.5z M34.425,0L1.275,33.15L121.125,153H1.275v153h102l127.5,127.5V262.65L340.425,372.3c-17.851,12.75-35.7,22.95-58.65,30.601v53.55c35.7-7.65,66.3-22.95,94.35-45.9l51,51l33.15-33.149l-229.5-229.5L34.425,0zM230.775,25.5l-53.55,53.55l53.55,53.55V25.5z"/>
+          </svg>
+        </button>
+        <div class="cm-volume-bar" id="{{ VolumeBar }}"><i id="{{ VolumeFill }}"></i></div>
+      </div>
+      <div class="cm-track-time">
+        <span class="cm-seek-pt" id="{{ TrackPlayedTime }}">00:00</span>
+        <span class="cm-seek-dt" id="{{ TrackDurationTime }}">00:00</span>
+      </div>
+    </div>
+  </div>
+</div>
