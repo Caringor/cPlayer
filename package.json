@@ -7,9 +7,11 @@
     "url": "git+https://github.com/Caringor/cPlayer.git",
     "type": "git"
   },
-  "keywords": {
-    "player", "html5", "music"
-  },
+  "keywords": [
+    "player",
+		"html5",
+		"music"
+  ],
   "author": "Caringor",
   "license": "MIT",
   "bugs": {

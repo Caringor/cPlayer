@@ -2,6 +2,9 @@
 ---
 > 一个支持自定义皮肤的 HTML5 音乐播放器
 
+## 截图
+![截图](https://raw.githubusercontent.com/Caringor/cPlayer/master/demo/screenshot.jpg)
+
 ## 演示
 有关 cPlayer 之演示，请参考 [cPlayer 演示页](https://caringor.github.io/cPlayer/demo/)。
 
