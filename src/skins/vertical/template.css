@@ -38,27 +38,55 @@
 .cmplayer-vertical-skin .cm-thumb .cm-cover {
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   display: block;
+  position: absolute;
+  z-index: 8;
 }
 .cmplayer-vertical-skin .cm-thumb .cm-stop-btn {
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
+  margin: -25px -25px 0 0;
+  top: 50%;
+  right: 50%;
   padding: 10px;
   bottom: 10px;
-  right: 10px;
   border: 2px solid #fff;
   background: rgba(0, 0, 0, .75);
   border-radius: 50%;
   position: absolute;
-  top: 9;
+  z-index: 9;
   overflow: hidden;
+  z-index: 10;
+  opacity: 0;
+  transition: .2s opacity ease;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.cmplayer-vertical-skin .cm-thumb:hover .cm-stop-btn {
   opacity: .75;
 }
 .cmplayer-vertical-skin .cm-thumb .cm-stop-btn:hover {
   opacity: 1;
 }
 .cmplayer-vertical-skin .cm-thumb .cm-stop-btn svg {
+  width: 60%;
+  height: 60%;
   fill: #fff;
+}
+.cmplayer-vertical-skin .cm-thumb .cm-lyrics {
+  width: 230px;
+  bottom: 20px;
+  left: 50%;
+  margin: 0 0 0 -115px;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  z-index: 9;
 }
 .cmplayer-vertical-skin .cm-meta {
   margin: 10px 0;

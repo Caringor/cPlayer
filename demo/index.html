@@ -85,6 +85,7 @@
         <div class="s"><button onclick="cm1.stop()">cm1.stop()</button><span>// 停止</span></div>
         <div class="s"><button onclick="cm1.prev()">cm1.prev()</button><span>// 上一首</span></div>
         <div class="s"><button onclick="cm1.next()">cm1.next()</button><span>// 下一首</span></div>
+        <div class="s"><button onclick="alert(JSON.stringify(cm1.getCurrInfo()))">cm1.getCurrInfo()</button><span>// 当前歌曲信息</span></div>
         <div class="s"><button onclick="cm1.push(playlist2)">cm1.push()</button><span>// 插入播放列表</span></div>
         <div class="s"><button onclick="cm1.modeToggle()">cm1.modeToggle()</button><span>// 播放模式切换</span></div>
         <div class="s"><button onclick="cm1.seek(50)">cm1.seek()</button><span>// 跳到指定时间 (百分比)</span></div>
@@ -99,7 +100,7 @@
         <code>
           <p>&lt;div id="cm1"&gt;&lt;/div&gt;</p>
           <p>&lt;!-- ... --&gt;</p>
-          <p>&lt;script type="text/javascript" src="cmusic.min.js" id="cmScript"&gt;&lt;/script&gt;</p>
+          <p>&lt;script type="text/javascript" src="cPlayer.min.js" id="cmScript"&gt;&lt;/script&gt;</p>
         </code>
         <h2>JS</h2>
         <code>
@@ -113,6 +114,7 @@
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'artist': '茶色坚果巧克力',</p>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cover': 'http://p3.music.126.net/CRO_peQ7AN1e811BoKrQCw==/2327666116025235.jpg?param=500y500',</p>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'file': 'https://m1.jixun.moe/26082159/192000/4975020ff8fcb2ecb26233cecdd80e9cb46bfb4655d3f8b4ca14e8894b4c13ac'</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'lrc': 'lrc/人生讃歌.lrc'</p>
           <p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
           <p>&nbsp;&nbsp;]</p>
           <p>})</p>

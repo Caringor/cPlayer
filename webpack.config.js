@@ -8,6 +8,10 @@ module.exports = {
   
   entry: './src/cPlayer.js',
   
+  devServer: {
+    publicPath: '/dist'
+  },
+  
   output: {
     path: DIST_PATH,
     filename: 'cPlayer.min.js',

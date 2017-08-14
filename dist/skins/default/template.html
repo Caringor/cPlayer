@@ -1,8 +1,11 @@
 <div class="cmplayer-container cmplayer-default-skin">
-  <img class="cm-cover" id="{{ TrackCover }}"></img>
+  <img class="cm-cover" id="{{ TrackCover }}" />
   <div class="cm-control">
-    <h2 class="cm-title" id="{{ TrackTitle }}"></h2>
-    <h3 class="cm-artist" id="{{ TrackArtist }}"></h3>
+    <div class="cm-meta">
+      <span class="cm-title" id="{{ TrackTitle }}"></span>
+      <span class="cm-artist" id="{{ TrackArtist }}"></span>
+    </div>
+    <p class="cm-lyrics" id="{{ Lyrics }}"></p>
     <div class="cm-seek-bar" id="{{ Seek }}">
       <div class="cm-seek-played" id="{{ SeekPlayed }}">
         <i class="cm-seek-pp" id="{{ SeekPlayedPoint }}"></i>
@@ -10,7 +13,7 @@
       <div class="cm-seek-loaded" id="{{ SeekLoaded }}"></div>
     </div>
     <div class="cm-toolbar">
-      <button class="cm-toggle-btn cm-btn large" id="{{ ToggleBtn }}" value="">
+      <button class="cm-toggle-btn cm-btn large" id="{{ ToggleBtn }}" value="" title="播放 / 暂停">
         <svg class="svg-playing" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 357 357">
           <polygon points="38.25,0 38.25,357 318.75,178.5"/>
         </svg>
@@ -18,23 +21,23 @@
           <path d="M25.5,357h102V0h-102V357z M229.5,0v357h102V0H229.5z"/>
         </svg>
       </button>
-      <button class="cm-stop-btn cm-btn" id="{{ StopBtn }}" value="">
+      <button class="cm-stop-btn cm-btn" id="{{ StopBtn }}" value="" title="停止">
         <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 306 306">
           <rect width="306" height="306"/>
         </svg>
       </button>
-      <button class="cm-prev-btn cm-btn" id="{{ PrevBtn }}" value="">
+      <button class="cm-prev-btn cm-btn" id="{{ PrevBtn }}" value="" title="上一曲">
         <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 306 306">
           <rect width="51" height="306"/>
           <polygon points="89.25,153 306,306 306,0"/>
         </svg>
       </button>
-      <button class="cm-next-btn cm-btn" id="{{ NextBtn }}" value="">
+      <button class="cm-next-btn cm-btn" id="{{ NextBtn }}" value="" title="下一曲">
         <svg version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 306 306">
           <path d="M0,306l216.75-153L0,0V306z M255,0v306h51V0H255z"/>
         </svg>
       </button>
-      <button class="cm-mode-btn cm-btn" id="{{ ModeBtn }}" value="">
+      <button class="cm-mode-btn cm-btn" id="{{ ModeBtn }}" value="" title="播放模式">
         <svg class="svg-default" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 344.339 344.339">
           <rect y="46.06" width="344.339" height="29.52"/>
           <rect y="156.506" width="344.339" height="29.52"/>
@@ -49,7 +52,7 @@
         </svg>
       </button>
       <div class="cm-volume">
-        <button class="cm-mute-btn cm-btn" id="{{ MuteBtn }}">
+        <button class="cm-mute-btn cm-btn" id="{{ MuteBtn }}" title="静音">
           <svg class="svg-volume" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 459 459">
             <path d="M0,153v153h102l127.5,127.5v-408L102,153H0z M344.25,229.5c0-45.9-25.5-84.15-63.75-102v204C318.75,313.65,344.25,275.4,344.25,229.5z M280.5,5.1v53.55C354.45,81.6,408,147.899,408,229.5S354.45,377.4,280.5,400.35V453.9C382.5,430.949,459,339.15,459,229.5C459,119.85,382.5,28.049,280.5,5.1z"/>
           </svg>

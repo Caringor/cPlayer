@@ -5,16 +5,16 @@
 ## 截图
 ![截图](https://raw.githubusercontent.com/Caringor/cPlayer/master/demo/screenshot.jpg)
 
-## 演示
-有关 cPlayer 之演示，请参考 [cPlayer 演示页](https://caringor.github.io/cPlayer/demo/)。
-
 ## 概述
-cPlayer 是一个基于 HTML5 的音乐播放插件，无需 jQuery 库支持即可调用出一个支持自定义皮肤的音乐播放器。此插件采用 ECMAScript6 编写，经 [Babel](https://babeljs.io/) 编译 ECMAScript5 后发布。
+cPlayer 是一个基于 HTML5 的音乐播放插件，无需 jQuery 库支持即可调用出一个支持自定义皮肤的音乐播放器。此插件采用 ECMAScript6 编写，经 [Babel](https://babeljs.io/) 编译 ECMAScript5 后发布。!
 
 ## 特性
 - [x] 支持自定义皮肤
 - [x] 提供 API 接口
-- [ ] ~~LRC 歌词显示（计划中）~~
+- [x] LRC 歌词显示
+
+## 演示
+有关 cPlayer 的演示，请参考 [cPlayer 演示页](https://caringor.github.io/cPlayer/demo/)。
 
 ## 获取
 ```
@@ -27,7 +27,7 @@ git clone https://github.com/caringor/cPlayer.git
 ```
 <div id="cm1"></div>
 <!-- ... -->
-<script type="text/javascript" src="cmusic.min.js" id="cmScript"></script>
+<script type="text/javascript" src="cPlayer.min.js" id="cmScript"></script>
 ```
 
 #### JS
@@ -41,7 +41,8 @@ var cm1 = new cMusic({
       'title': '人生讃歌',
       'artist': '茶色坚果巧克力',
       'cover': 'http://p3.music.126.net/CRO_peQ7AN1e811BoKrQCw==/2327666116025235.jpg?param=500y500',
-      'file': 'https://m1.jixun.moe/26082159/192000/4975020ff8fcb2ecb26233cecdd80e9cb46bfb4655d3f8b4ca14e8894b4c13ac'
+      'file': 'https://m1.jixun.moe/26082159/192000/4975020ff8fcb2ecb26233cecdd80e9cb46bfb4655d3f8b4ca14e8894b4c13ac',
+      'lrc': 'lrc/人生讃歌.lrc'
     }
   ]
 })
@@ -68,9 +69,10 @@ volume: 50
 playlist: [
   {
     'title': '', // 歌曲标题
-    'artist': '', // 歌手
-    'cover': '', // 封面地址
-    'file': '' // 音乐地址
+    'artist': '', // 歌手名
+    'cover': '', // 封面文件地址
+    'file': '', // 音乐文件地址
+    'lrc': '' // 歌词文件地址
   }
 ]
 ```
@@ -115,6 +117,7 @@ cPlayer 把每个按钮都当成是独立的部件，并根据部件标记来绑
 > + `{{ NextBtn }}` 下一曲按钮
 > + `{{ ModeBtn }}` 播放模式切换妞
 > + `{{ MuteBtn }}` 静音按钮
+> + `{{ Lyrics }}` 歌词区域
 > + `{{ Seek }}` 进度条
 > + + `{{ SeekPlayedPoint }}` 进度条拖拽触点
 > + + `{{ SeekPlayed }}` 播放进度
@@ -122,10 +125,19 @@ cPlayer 把每个按钮都当成是独立的部件，并根据部件标记来绑
 > + `{{ VolumeBar }}` 音量控制条
 > + + `{{ VolumeFill }}` 音量百分比
 
+## 更新说明
+#### 1.1
++ [增加] LRC 歌词支持
++ [增加] 新增获取当前歌曲信息的 API
++ [优化] 自带皮肤细节调整
++ [优化] 现在可以通过 npm run build 指令进行编译了
+
+#### 1.0
++ 初版发布
 
 ## 其它
 cPlayer 采用 MIT 许可证进行发布，有关 cPlayer 的使用问题欢迎提交 Issue 或使用以下方式与我联系。
 
 - Telegram: [@lkwing](https://telegram.me/lkwing)
 - QQ: 474599981
-- 用户交流群: 635767413
+- ~~用户交流群: 635767413~~

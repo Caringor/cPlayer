@@ -24,23 +24,43 @@
   padding: 0 15px;
   float: left;
 }
-.cmplayer-default-skin .cm-control .cm-title {
+.cmplayer-default-skin .cm-control .cm-meta {
+  height: 16px;
+  line-height: 16px;
   margin: 15px 0 0 0;
+}
+.cmplayer-default-skin .cm-control .cm-meta .cm-title {
+  max-width: 120px;
   line-height: 1em;
   color: #777;
   font-size: 16px;
-}.cmplayer-default-skin .cm-control .cm-title,
-.cmplayer-default-skin .cm-control .cm-artist {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
-.cmplayer-default-skin .cm-control .cm-artist {
-  margin: 8px 0 0 0;
+.cmplayer-default-skin .cm-control .cm-meta .cm-artist {
+  max-width: 100px;
   line-height: 1em;
   color: #b5b5b5;
   font-size: 14px;
   font-weight: normal;
+}
+.cmplayer-default-skin .cm-control .cm-meta .cm-title,
+.cmplayer-default-skin .cm-control .cm-meta .cm-artist {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+.cmplayer-default-skin .cm-control .cm-lyrics {
+  width: 100%;
+  height: 13px;
+  margin: 8px 0 0 0;
+  line-height: 1em;
+  color: #c5c5c5;
+  font-size: 12px;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .cmplayer-default-skin .cm-control .cm-seek-bar {
   width: 100%;
